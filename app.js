@@ -1,7 +1,7 @@
 // Game data: images, words, and explanations
 const gameData = [
   {
-    image: 'https://www.keflatwork.com/wp-content/uploads/2023/08/a-man-smoothing-the-wet-concrete-surface-of-a-path.jpg_s1024x1024wisk20cYeJnSDNOg1bssmjkUekTlMF3FwXSWhK_GNAM-OKW2GY.jpg',
+    image: 'https://concrete-live.storage.googleapis.com/upload/img_cache/file-1028-4d6515ab02edbfacbd9a5c2a1547be56.jpg',
     word: 'concrete',
     isRoman: true,
     explanation: 'Roman concrete was made from volcanic ash, lime, and water, used in durable structures like the Pantheon. Today’s concrete builds on their formula, used in nearly all modern construction.'
