@@ -129,7 +129,7 @@ function continueGame() {
       <h1>Game over</h1>
       <p>Thanks for playing. Your Final Score:</p>
       <h1>${correctAnswers} of ${gameData.length}</h1>
-      <a href="index.html">Play again</a>
+      <a href="https://htmlpreview.github.io/?https://github.com/youngco/oliver/blob/main/index.html">Play again</a>
     `;
   }
 }
