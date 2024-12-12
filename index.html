@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Invention Game</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      font-weight:100;
+      text-align: center;
+      background-color: #eee;
+      margin-top:5%;
+    }
+    img {
+      height:400px;
+      display: block; 
+      margin:auto;
+      margin-bottom:48px;
+      border-radius: 32px;
+    }
+    p {
+      font-size:22px;
+      font-family:helvetica;
+      margin:auto;
+      color:#333;
+      letter-spacing:1px;
+      line-height: 140%;
+    }
+    h1 {
+      font-weight:100;
+      font-size:48px;
+    }
+    h2 {
+      font-weight:200;
+    }
+    button {
+      padding:16px 36px;
+      min-width:120px;
+      border:0px;
+      border-radius: 12px;
+      font-size:24px;
+      margin-right:12px;
+      cursor: pointer;
+/*      background-color:black;
+      color:white;*/
+    }
+    button:hover {
+/*      background-color:#333;*/
+    }
+
+    button:disabled {
+/*      display:none;*/
+      height:0px;
+      font-size:0px;
+      background-color:white;
+      display:inline;
+    }
+
+    #game {
+      background-color: white; 
+      border-radius:48px;
+      width:60%;
+      margin:auto;
+/*      margin-top:120px;*/
+      padding:64px;
+  height:100%;
+
+    }
+
+    #continue-btn {
+      margin:auto;
+      margin-top: 10px;
+      
+    }
+    #progress-container {
+      border: 1px solid #ccc;
+      height: 20px;
+      width: 100%;
+      margin-top: 0px;
+      overflow: hidden;
+      position: relative; /* Ensures the child stays within bounds 
+      */
+      border: 0px solid #ccc; height: 20px; width: 30%; margin-top: 10px; border-radius: 10px; background-color: #eee;
+      display:none;
+    }
+
+    #progress-bar {
+      height: 100%;
+      width: 0%; /* Start empty */
+      background-color: blue;
+      transition: width 0.5s ease; /* Smooth animation for filling */
+      position: absolute; /* Positioned relative to the container */
+      left: 0; /* Start filling from the left */
+      height: 100%; background-color: blue; width: 0%;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div id="game">
+        <h2 id="question-tracker">Question 1 of X</h2>
+    <h1> Did Romans invent <span id="word"></span>?</h1>
+
+    <img id="image" alt="Question Image">
+          <div id="progress-container" style="margin:auto;">
+        <div id="progress-bar"></div>
+      </div>
+    <button onclick="submitAnswer(true)">Yes</button>
+    <button onclick="submitAnswer(false)">No</button>
+    <p id="feedback" style="font-family:georgia; width:80%;margin-top:0px;font-size:48px;margin-bottom:16px;"></p>
+    <p id="explanation" style="margin-bottom:24px;width:50%;"></p>
+    <button id="continue-btn" onclick="continueGame()" style="display: none;">Continue</button>
+    <div id="trackers" style="margin-top:48px">
+  
+      <h2 id="score" style="font-weight:400">Score: 0 of X</h2>
+
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
